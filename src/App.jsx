@@ -6,19 +6,13 @@ import Series from "./pages/Series";
 import SimilarMov from "./pages/SimilarMov";
 import SimilarSeries from "./pages/SimilarSeries";
 import SearResults from "./pages/SearchResults";
-// import Token from "./pages/Token";
 import NotFoundPage from "./pages/NotFound";
-// import Login from "./pages/Login";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-// import PrivateRoute from "./components/PrivateRoute";
-
-// import { AuthProvider } from "./context/AuthContext";
 
 import ReactGa from "react-ga";
 import { useEffect } from "react";
-// import { ToastContainer } from "react-toastify";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -27,19 +21,19 @@ function App() {
   useEffect(() => {
     ReactGa.pageview(window.location.pathname + window.location.search);
 
-    // ✅ First ad script
-    const script1 = document.createElement("script");
-    script1.src = "//pl27014688.profitableratecpm.com/510d32f6cf87c1fab8c5d23f5e3c41b7/invoke.js";
-    script1.async = true;
-    script1.setAttribute("data-cfasync", "false");
-    document.body.appendChild(script1);
+    // ✅ Adsterra Social Bar Script
+    const socialBarScript = document.createElement("script");
+    socialBarScript.src = "//pl27014703.profitableratecpm.com/84/94/33/8494334706451855cea15476ec502b59.js";
+    socialBarScript.type = "text/javascript";
+    socialBarScript.async = true;
+    document.body.appendChild(socialBarScript);
 
-    // ✅ Second ad script
-    const script2 = document.createElement("script");
-    script2.src = "//pl27014703.profitableratecpm.com/84/94/33/8494334706451855cea15476ec502b59.js";
-    script2.async = true;
-    script2.type = "text/javascript";
-    document.body.appendChild(script2);
+    // ✅ Adsterra Native Banner Script
+    const bannerScript = document.createElement("script");
+    bannerScript.src = "//pl27014688.profitableratecpm.com/510d32f6cf87c1fab8c5d23f5e3c41b7/invoke.js";
+    bannerScript.async = true;
+    bannerScript.setAttribute("data-cfasync", "false");
+    document.body.appendChild(bannerScript);
   }, []);
 
   return (
@@ -59,7 +53,7 @@ function App() {
         </Routes>
       </div>
 
-      {/* ✅ Ad Container (can repeat or reposition as needed) */}
+      {/* ✅ Native Banner Ad Container */}
       <div
         id="container-510d32f6cf87c1fab8c5d23f5e3c41b7"
         style={{ margin: "20px auto", minHeight: "120px", textAlign: "center" }}
